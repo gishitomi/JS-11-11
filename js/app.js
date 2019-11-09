@@ -20,10 +20,10 @@ $(function () {
             $('nav').removeClass('open');
         }
     });
-    $(window).on('scroll', function () {
-        // console.log(123);
-        $('.menu-trigger').addClass('black');
-    });
+    // $(window).on('scroll', function () {
+    //     // console.log(123);
+    //     $('.menu-trigger').addClass('black');
+    // });
     // メニューバーのアクション終了
 
     // スクロールに応じたフェードイン
@@ -40,6 +40,17 @@ $(function () {
     });
     // スクロールに応じたフェードイン終了
 
+    $(window).scroll(function () {
+        $('.box02').each(function () {
+            var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
+            // ここからスクロールされたときの処理
+            if (scroll > elemPos - windowHeight) {
+                $('.menu-trigger span').css('background-color', 'black');
+            }
+        });
+    });
 
 
     // 画面上に表示されるとこまでスクロールしたときのアニメーション
