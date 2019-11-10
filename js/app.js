@@ -6,11 +6,13 @@ $(function () {
             $(this).removeClass('active');
             $('nav').removeClass('open');
             $('.overlay').removeClass('open');
+            // $('.menu-trigger span').css('background-color', 'black');
         } else {
             $(this).addClass('active');
             $('main').addClass('open');
             $('nav').addClass('open');
             $('.overlay').addClass('open');
+            // $('.menu-trigger span').css('background-color', 'white');
         }
     });
     $('.overlay').on('click', function () {
@@ -40,6 +42,7 @@ $(function () {
     });
     // スクロールに応じたフェードイン終了
 
+    // スクロールさせた時ハンバーガーメニューの色を変える
     $(window).scroll(function () {
         $('.box02').each(function () {
             var elemPos = $(this).offset().top,
@@ -49,8 +52,14 @@ $(function () {
             if (scroll > elemPos - windowHeight) {
                 $('.menu-trigger span').css('background-color', 'black');
             }
+            // 元に戻す
+            else if (scroll < elemPos - windowHeight) {
+                $('.menu-trigger span').css('background-color', 'white');
+            }
         });
     });
+    // スクロールさせた時ハンバーガーメニューの色を変える終了
+
 
 
     // 画面上に表示されるとこまでスクロールしたときのアニメーション
@@ -103,7 +112,7 @@ $(function () {
 
     //雪を降らせるライブラリ
     $(document).snowfall({
-        flakeCount: 10,
+        flakeCount: 40,
 
         minSize: 10,    // 雪の最小サイズ
         maxSize: 20,    // 雪の最大サイズ
@@ -116,7 +125,9 @@ $(function () {
     });
     // 雪を降らせるライブラリ終了
 
+    // ページトップに戻る
 
-
+    $("html,body").animate({ scrollTop: $('header').offset().top });
+    // ページトップに戻る終了
 });
 
