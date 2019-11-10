@@ -19,10 +19,19 @@ $(function () {
             $('nav').removeClass('open');
         }
     });
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         // console.log(123);
         $('.menu-trigger').addClass('black');
     });
     // メニューバーのアクション終了
+
+    // 画像のスライドアニメーション
+    $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2300,
+        dots: true
+    });
+    // 画像のスライドアニメーション終了
+
 
 });  

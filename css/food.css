@@ -37,7 +37,7 @@ header h1 {
   }
   .overlay.open {
     width: 100%;
-    height: 100%;
+    height: 460vh;
     opacity: 1;
   }
   
@@ -156,7 +156,6 @@ header h1 {
 .text-box {
   width: 40%;
   height: 100%;
-  background-color: purple;
 }
 .box h2 {
   width: 100%;
@@ -174,7 +173,6 @@ header h1 {
 .text {
   width: 100%;
   height: 80%;
-  background-color: blue;
 }
 
 .text p{
@@ -187,19 +185,25 @@ header h1 {
 .pic-box {
   width: 60%;
   height: 100%;
-  background-color: purple;
 }
+
 
 .box-img {
   width: 100%;
   height: 50%;
-  background-color: yellow;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+}
+.slider img {
+  height: 305px;
 }
 
 .map {
   width: 100%;
   height: 50%;
-  background-color: green;
 }
 
 .map iframe {

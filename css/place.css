@@ -201,7 +201,13 @@ header h1 {
   justify-content: space-between;
 }
 
-
+.fade {
+  height: 100%;
+  width: 100%;
+}
+.fade img {
+  height: 305px;
+}
 
 .map {
   width: 100%;
