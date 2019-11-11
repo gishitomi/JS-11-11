@@ -119,7 +119,7 @@ $(function () {
         minSpeed: 1,    // 雪の最低速度
         maxSpeed: 3,    // 雪の最高速度
         round: true, // 雪の形を丸くする
-        shadow: true, // 雪に影をつける
+        // shadow: true, // 雪に影をつける
         flakeColor: "white", // 雪の色を指定
         // image: "https://lib.tree-web.net/image/sakura_hanabira3.png"
     });
