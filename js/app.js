@@ -104,7 +104,7 @@ $(function () {
     // 波動ライブラリ
     let $hoge = $('.main-img');
     $hoge.ripples({
-        resolution: 400,
+        resolution: 300,
         dropRadius: 25,
         perturbance: 0.05
     });
