@@ -1,6 +1,6 @@
 // メニューバーのアクション
-$(function () {
-    $('.menu-trigger').on('click', function () {
+$(function() {
+    $('.menu-trigger').on('click', function() {
         // $(this).toggleClass('on');
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
@@ -15,7 +15,7 @@ $(function () {
             // $('.menu-trigger span').css('background-color', 'white');
         }
     });
-    $('.overlay').on('click', function () {
+    $('.overlay').on('click', function() {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             $('.menu-trigger').removeClass('active');
@@ -29,22 +29,24 @@ $(function () {
     // メニューバーのアクション終了
 
     // スクロールに応じたフェードイン
-    $(window).scroll(function () {
-        $('.fadein').each(function () {
+    $(window).scroll(function() {
+        $('.fadein').each(function() {
             var elemPos = $(this).offset().top,
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
             // ここからスクロールされたときの処理
             if (scroll > elemPos - windowHeight + 100) {
                 $(this).addClass('scrollin');
+            } else {
+                $(this).removeClass('scrollin');
             }
         });
     });
     // スクロールに応じたフェードイン終了
 
     // スクロールさせた時ハンバーガーメニューの色を変える
-    $(window).scroll(function () {
-        $('.box02').each(function () {
+    $(window).scroll(function() {
+        $('.box02').each(function() {
             var elemPos = $(this).offset().top,
                 scroll = $(window).scrollTop(),
                 windowHeight = $(window).height();
@@ -88,11 +90,11 @@ $(function () {
     // 画面上に表示されるとこまでスクロールしたときのアニメーション終了
 
     // 下線を引っ張るアニメーション
-    $(function () {
-        $(window).scroll(function () {
+    $(function() {
+        $(window).scroll(function() {
             var windowHeight = $(window).height();
             var windowTop = $(window).scrollTop();
-            $(".underline").each(function () {
+            $(".underline").each(function() {
                 var objectImage = $(this).offset().top;
                 if (windowTop > objectImage - windowHeight * 1 / 2) { $(this).css("background-size", "100% 100%") };
             });
@@ -114,10 +116,10 @@ $(function () {
     $(document).snowfall({
         flakeCount: 40,
 
-        minSize: 10,    // 雪の最小サイズ
-        maxSize: 20,    // 雪の最大サイズ
-        minSpeed: 1,    // 雪の最低速度
-        maxSpeed: 3,    // 雪の最高速度
+        minSize: 10, // 雪の最小サイズ
+        maxSize: 20, // 雪の最大サイズ
+        minSpeed: 1, // 雪の最低速度
+        maxSpeed: 3, // 雪の最高速度
         round: true, // 雪の形を丸くする
         // shadow: true, // 雪に影をつける
         flakeColor: "white", // 雪の色を指定
@@ -130,4 +132,3 @@ $(function () {
     $("html,body").animate({ scrollTop: $('header').offset().top });
     // ページトップに戻る終了
 });
-
